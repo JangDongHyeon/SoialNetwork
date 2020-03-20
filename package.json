@@ -1,0 +1,42 @@
+{
+    "name": "nodeapi",
+    "version": "1.0.0",
+    "description": "A Node Js API",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "server": "nodemon app.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "keywords": [
+        "node",
+        "api"
+    ],
+    "author": "Jang",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "concurrently": "^5.1.0",
+        "cookie-parser": "^1.4.4",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-jwt": "^5.3.1",
+        "express-validator": "^6.4.0",
+        "formidable": "^1.2.2",
+        "jsonwebtoken": "^8.5.1",
+        "lodash": "^4.17.15",
+        "mongoose": "^5.9.3",
+        "morgan": "^1.9.1",
+        "nodemailer": "6.4.5",
+        "nodemon": "^2.0.2",
+        "passport": "0.4.1",
+        "passport-jwt": "4.0.0",
+        "passport-local": "1.0.0",
+        "react-google-login": "5.1.2",
+        "uuid": "^7.0.2"
+    }
+}
